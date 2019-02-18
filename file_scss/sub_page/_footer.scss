@@ -1,0 +1,145 @@
+.contact {
+    background: $gray-bg;
+    padding: 60px 0;
+    .container {
+        padding: 0;
+        .contact__top {
+            color: $gray-700;
+            .contact__top__content {
+                padding: 0;
+                @include title();
+                .text {
+                    width: 100%;
+                    float: left;
+                    padding: 30px 0;
+                    font-size: 13px;
+                }
+                .icon {
+                    width: 100%;
+                    float: left;
+                    .fas {
+                        width: 10%;
+                        float: left;
+                        padding-top: 5px;
+                    }
+                    .text {
+                        width: 90%;
+                        float: left;
+                        padding: 0;
+                    }
+                }
+            }
+            .contact__top_content {
+                @include title();
+                @include clear;
+                font-size: 13px;
+                list-style: none;
+                li {
+                    width: 100%;
+                    float: left;
+                    margin-top: 20px;
+                    .fab {
+                        width: 10%;
+                        float: left;
+                        padding-top: 5px;
+                    }
+                    div {
+                        width: 90%;
+                        float: left;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+        .contact__bottom {
+            @extend .contact__top;
+            .contact__bottom__left {
+                padding: 0 30px 0 0;
+                font-size: 13px;
+                margin: 20px 0;
+                .img {
+                    float: left;
+                    margin: 10px 0;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            .contact__bottom__right {
+                @extend .contact__bottom__left;
+                padding: 0;
+                .title {
+                    margin-bottom: 35px;
+                }
+                .content {
+                    @include clear;
+                    float: left;
+                    .icon {
+                        width: 60px;
+                        height: 60px;
+                        float: left;
+                        color: $yellow;
+                        border: 2px solid $yellow;
+                        border-radius: 50%;
+                        position: relative;
+                        font-size: 20px;
+                        i {
+                            @include align-center;
+                        }
+                    }
+                    .wrap-text {
+                        width: max-content;
+                        height: 60px;
+                        padding: 5px 0 0 10px;
+                        float: left;
+                        .text {
+                            .text-bottom {
+                                font-size: 18px;
+                                color: $red;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    background: $black-bg;
+    color: $gray-600;
+    font-size: 13px;
+    height: 60px;
+    .footer__left {
+        width: 50%;
+        height: 60px;
+        float: left;
+        position: relative;
+        .copyright {
+            @include align-center;
+            left: auto;
+            transform: translate(0%, -50%);
+            b {
+                color: $white;
+            }
+        }
+    }
+    .footer__right {
+        @extend .footer__left;
+        position: relative;
+        ul {
+            @include clear;
+            @include align-center;
+            list-style: none;
+            width: max-content;
+            float: right;
+            li {
+                color: $gray-600;
+                width: max-content;
+                float: left;
+                padding: 0 10px;
+            }
+        }
+    }
+}
