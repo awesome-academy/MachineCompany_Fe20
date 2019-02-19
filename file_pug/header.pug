@@ -1,0 +1,66 @@
+header.header
+    .container-fluid.header__top
+        .container
+            .header__top__left
+                button
+                    i.fab.fa-facebook-f
+                button
+                    i.fab.fa-google-plus-g
+                button
+                    i.fab.fa-instagram
+                button
+                    i.fab.fa-twitter
+            .header__top__right
+                button(href="") ĐĂNG KÝ
+                button(href="") ĐĂNG NHẬP
+            .clearfix
+    .container-fluid.header__center
+        .container
+            .row
+                .col-3.header__center__logo
+                    img(src="../images/logo.png", alt="logo", class="logo-img")
+                .col-3.header__center__phone
+                    div
+                        h5 HOTLINE:
+                        p (04) 9500 9650 - (04) 9500 8850
+                .col-3.header__center__phone
+                    div
+                        h5 ĐẶT HÀNG NHANH:
+                        p (04) 9500 9650 - (04) 9500 8850
+                .col-3.header__center__search
+                    div
+                        input(type="text", placeholder="Tìm kiếm...")
+                        i.fas.fa-search
+    .container-fluid.header__menu
+        .container
+            .header__menu__left
+                ul
+                    a(href="")
+                        li TRANG CHỦ
+                    a.dropdown-toggle(data-toggle='dropdown')
+                        li GIỚI THIỆU
+                    .dropdown-menu
+                        a.dropdown-item(href='')
+                            .dropdown.dropright
+                                button.dropdown-toggle(data-toggle='dropdown')
+                                    | Giới thiệu chung
+                                .dropdown-menu
+                                    a.dropdown-item(href='') Link 1
+                                    a.dropdown-item(href='') Link 2
+                                    a.dropdown-item(href='') Link 3
+                        a.dropdown-item(href='') Hệ thống cửa hàng
+                        a.dropdown-item(href='') Chính sách ưu đãi
+                        a.dropdown-item(href='') Thông tin tuyển dụng
+                    a(href="")
+                        li SẢN PHẨM
+                    a(href="")
+                        li TIN KHUYẾN MẠI
+                    a(href="")
+                        li DỊCH VỤ
+                    a(href="")
+                            li LIÊN HỆ
+            .header__menu__right
+                i.fas.fa-shopping-basket
+                p 0
+
+

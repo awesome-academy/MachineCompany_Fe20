@@ -1,0 +1,38 @@
+// Black & white
+$white: #fff;
+$black-icon: #363636;
+$black-bg: #202020;
+$black-text: #111111;
+$gray-bg: #f7f7f7;
+$gray-border: #e1e1e1;
+// Various colors
+$blue: #409EFF !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #F56C6C !default;
+$orange: #fd7e14 !default;
+$yellow: #f5bd10 !default;
+$green: #67C23A !default;
+$teal: #20c997 !default;
+$cyan: #909399 !default;
+// Grayscales
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+// Semantic colors
+$primary: $blue;
+$secondary: $gray-600;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+// Light and dark
+$light: $gray-100;
+$dark: $gray-800;
