@@ -1,5 +1,6 @@
-@import "header.scss";
 @import "_color.scss";
+@import "header.scss";
+@import "banner.scss";
 .clearfix::after {
     content: ".";
     visibility: hidden;

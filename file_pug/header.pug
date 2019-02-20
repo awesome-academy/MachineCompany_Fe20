@@ -40,17 +40,18 @@ header.header
                     a.dropdown-toggle(data-toggle='dropdown')
                         li GIỚI THIỆU
                     .dropdown-menu
+                        a.dropdown-item(href='') 
+                            i.fas.fa-caret-right
+                            | Giới thiệu chung
                         a.dropdown-item(href='')
-                            .dropdown.dropright
-                                button.dropdown-toggle(data-toggle='dropdown')
-                                    | Giới thiệu chung
-                                .dropdown-menu
-                                    a.dropdown-item(href='') Link 1
-                                    a.dropdown-item(href='') Link 2
-                                    a.dropdown-item(href='') Link 3
-                        a.dropdown-item(href='') Hệ thống cửa hàng
-                        a.dropdown-item(href='') Chính sách ưu đãi
-                        a.dropdown-item(href='') Thông tin tuyển dụng
+                            i.fas.fa-caret-right
+                            | Hệ thống cửa hàng
+                        a.dropdown-item(href='')
+                            i.fas.fa-caret-right
+                            | Chính sách ưu đãi
+                        a.dropdown-item(href='')
+                            i.fas.fa-caret-right
+                            | Thông tin tuyển dụng
                     a(href="")
                         li SẢN PHẨM
                     a(href="")
@@ -58,9 +59,27 @@ header.header
                     a(href="")
                         li DỊCH VỤ
                     a(href="")
-                            li LIÊN HỆ
+                        li LIÊN HỆ
             .header__menu__right
-                i.fas.fa-shopping-basket
-                p 0
+                a.dropdown-toggle(data-toggle='dropdown')
+                    i.fas.fa-shopping-basket
+                    p 0
+                //- .dropdown-menu
+                //-     a.dropdown-item(href='') 
+                //-         .img-cart
+                //-             img(src="../images/1.jpg")
+                //-         .cart-item
+                //-             .cart-item__name MÁY KHOAN BLACK DECKER
+                //-             .cart-item__price 1 x 1.250.000 Đ
+                //-         i.far.fa-times-circle
+                //-     a.dropdown-item(href='')
+                //-         i.fas.fa-caret-right
+                //-         | Hệ thống cửa hàng
+                //-     a.dropdown-item(href='')
+                //-         i.fas.fa-caret-right
+                //-         | Chính sách ưu đãi
+                //-     a.dropdown-item(href='')
+                //-         i.fas.fa-caret-right
+                //-         | Thông tin tuyển dụng
 
 

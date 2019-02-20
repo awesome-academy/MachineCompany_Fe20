@@ -141,13 +141,16 @@
                     .show {
                         border-radius: 0;
                     }
-                    a {
+                    .dropdown-item {
                         width: 203px;
                         height: 50px;
                         padding-top: 14px;
                         border: none;
                         &:hover {
                             color: $white;
+                        }
+                        .fas {
+                            margin-right: 10px;
                         }
                     }
                 }
@@ -160,9 +163,14 @@
             height: 70px;
             border: 1px solid $black-icon;
             position: relative;
-            i {
-                font-size: 25px;
-                @include align-center();
+            .dropdown-toggle {
+                .fa-shopping-basket {
+                    font-size: 25px;
+                    @include align-center();
+                }
+                &::after {
+                    content: none;
+                }
             }
             p {
                 font-size: 16px;
@@ -182,6 +190,35 @@
                 p {
                     background: $black-icon;
                     transition: all .3s;
+                }
+            }
+            .dropdown-menu {
+                position: absolute;
+                transform: none !important;
+                top: 100% !important;
+                left: -328% !important;
+                padding: 0;
+                margin: 0;
+                .dropdown-item {
+                    $w: 290px;
+                    width: $w;
+                    height: 120px;
+                    padding: 0;
+                    margin: 0;
+                    .img-cart {
+                        width: $w / 3;
+                        height: 120px;
+                        position: relative;
+                        float: left;
+                        img {
+                            @include align-center();
+                        }
+                    }
+                    .cart-item {
+                        width: $w - $w/2;
+                        height: 120px;
+                        float: left;
+                    }
                 }
             }
         }
