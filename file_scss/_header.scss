@@ -120,7 +120,8 @@
                     &:last-child {
                         border-right: 1px solid $black-icon;
                     }
-                    &:hover {
+                    &:hover,
+                    .active {
                         background: $yellow;
                         transition: all .3s;
                     }

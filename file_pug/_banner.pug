@@ -1,0 +1,47 @@
+.banner
+    .container
+        .row
+            .col-8.slide
+                #banner.carousel.slide(data-ride='carousel')
+                    // Indicators
+                    ul.carousel-indicators
+                        li.active(data-target='#demo' data-slide-to='0')
+                        li(data-target='#demo' data-slide-to='1')
+                        li(data-target='#demo' data-slide-to='2')
+                    // The slideshow
+                    .carousel-inner
+                        .carousel-item.active
+                            img(src='../images/2.jpg' alt='Los Angeles' width='1100' height='500')
+                        .carousel-item
+                            img(src='../images/2.jpg' alt='Chicago' width='1100' height='500')
+                        .carousel-item
+                            img(src='../images/2.jpg' alt='New York' width='1100' height='500')
+            .col-4.banner__right
+                .banner__right__content
+                    .row
+                        .col-2.icon
+                            i.fas.fa-plane
+                        .col-10.text
+                            h5.title MIỄN PHÍ VẬN CHUYỂN
+                            p Chúng tôi vận chuyển miễn phí với các đơn hàng trị giá trên 1.000.000 Đ
+                .banner__right__content
+                    .row
+                        .col-2.icon
+                            i.fas.fa-sync-alt
+                        .col-10.text
+                            h5.title CHÍNH SÁCH ĐỔI TRẢ
+                            p Nếu phất hiện lỗi của nhà sản xuất, chúng tôi sẽ đổi mới sản phẩm trong 7 ngày đầu tiên
+                .banner__right__content
+                    .row
+                        .col-2.icon
+                            i.fas.fa-gift
+                        .col-10.text
+                            h5.title KHUYẾN MẠI HÀNG TUẦN
+                            p Mỗi thứ 7 hàng tuần đều có chương trình giảm giá và khuyến mại lớn
+                .banner__right__content
+                    .row
+                        .col-2.icon
+                            i.fas.fa-thumbs-up
+                        .col-10.text
+                            h5.title CAM KẾT HÀNG CHÍNH HÃNG
+                            p Chúng tôi cam kết bán hàng chính hãng 100% với tất cả các loại sản phẩm
