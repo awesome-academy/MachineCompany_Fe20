@@ -299,7 +299,6 @@ $box-shadow: 0px 0px 4px 0px #00000033;
                         position: relative;
                         &.center {
                             height: 100%;
-                            .wrap-content {}
                         }
                         .wrap-content {
                             box-shadow: none;
@@ -359,6 +358,12 @@ $box-shadow: 0px 0px 4px 0px #00000033;
                         .content {
                             float: right;
                             @include prod__detail2();
+                            .button {
+                                button {
+                                    margin: 0;
+                                    margin-right: 10px;
+                                }
+                            }
                         }
                         &.right {
                             float: right;

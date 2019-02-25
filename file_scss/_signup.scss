@@ -1,0 +1,67 @@
+.breadcrumb {
+    border-bottom: 1px solid $gray-border;
+    border-radius: 0;
+}
+
+.info-profile {
+    h3 {
+        font-size: 14px;
+        font-weight: bold;
+        padding: 20px 0;
+    }
+    .form {
+        font-size: 14px;
+        width: 48%;
+        float: left;
+        p {
+            color: $gray-900;
+            width: max-content;
+            float: left;
+            padding: 10px 0;
+        }
+        i {
+            float: left;
+            padding: 10px 0;
+            color: $red;
+            padding-left: 5px;
+        }
+        &.right {
+            float: right;
+        }
+        input {
+            width: 100%;
+            height: 50px;
+            border: $border;
+            padding: 0 10px;
+        }
+    }
+    .tick {
+        margin: 20px 0;
+        width: 100%;
+        float: left;
+        font-size: 14px;
+        font-style: italic;
+        color: $gray-800;
+    }
+}
+
+.info-signup {
+    @extend .info-profile;
+}
+
+.button {
+    button {
+        width: 125px;
+        height: 50px;
+        font-size: 14px;
+        font-weight: bold;
+        color: $white;
+        background: $yellow;
+        margin-right: 10px;
+        margin-bottom: 100px;
+        &:hover {
+            background: $gray-900;
+            transition: .3s;
+        }
+    }
+}
