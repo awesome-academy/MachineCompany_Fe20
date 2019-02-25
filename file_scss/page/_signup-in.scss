@@ -29,7 +29,7 @@
             float: right;
         }
         input {
-            width: 100%;
+            width: 98%;
             height: 50px;
             border: $border;
             padding: 0 10px;
@@ -49,19 +49,42 @@
     @extend .info-profile;
 }
 
-.button {
-    button {
-        width: 125px;
-        height: 50px;
-        font-size: 14px;
-        font-weight: bold;
-        color: $white;
-        background: $yellow;
-        margin-right: 10px;
-        margin-bottom: 100px;
-        &:hover {
-            background: $gray-900;
-            transition: .3s;
+.signup {
+    .button {
+        button {
+            width: 125px;
+            height: 50px;
+            font-size: 14px;
+            font-weight: bold;
+            color: $white;
+            background: $yellow;
+            margin-right: 10px;
+            margin-bottom: 100px;
+            &:hover {
+                background: $gray-900;
+                transition: .3s;
+            }
+        }
+    }
+}
+
+.signin {
+    @extend .signup;
+    .signin__left {
+        width: 48%;
+        float: left;
+        @extend .info-profile;
+        .form {
+            width: 100%;
+        }
+    }
+    .signin__right {
+        @extend .signin__left;
+        float: right;
+        .text {
+            font-size: 14px;
+            color: $gray-800;
+            padding-bottom: 30px;
         }
     }
 }

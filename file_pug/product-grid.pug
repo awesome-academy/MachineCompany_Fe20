@@ -19,10 +19,10 @@ body
             .name Máy khoan Black Decker
             .vote
                 .star
-                    i.fas.fa-star
-                    i.fas.fa-star
-                    i.fas.fa-star
-                    i.fas.fa-star
+                    -var n = 0
+                        while n < 4
+                            i.fas.fa-star
+                            -n++
                     i.far.fa-star
                 .text (12 Đánh giá)
                 .clearfix
@@ -30,7 +30,7 @@ body
                 button MUA NGAY
                 button XEM CHI TIẾT 
 
-    include _header.pug
+    include ../file_pug/sub_page/_header.pug
     .container
         .breadcrumb
             li.breadcrumb-item
@@ -39,57 +39,26 @@ body
             li.breadcrumb-item.active Danh mục sản phẩm
         .content
             .col-3.content__left
-                include _menu-product.pug
+                include ../file_pug/sub_page/_menu-product.pug
             .col-9.content__right
                 .content__right__header
-                    include _header-product.pug
+                    include ../file_pug/sub_page/_header-product.pug
                 .content__right__content
-                    .row
-                        .col-4.prod__detail
-                            +prod__detail('../images/3.jpg') 
-                        .col-4.prod__detail
-                            +prod__detail('../images/4.jpg') 
-                        .col-4.prod__detail
-                            +prod__detail('../images/5.jpg')
-                    .row
-                        .col-4.prod__detail
-                            +prod__detail('../images/6.jpg') 
-                        .col-4.prod__detail
-                            +prod__detail('../images/7.jpg') 
-                        .col-4.prod__detail
-                            +prod__detail('../images/8.jpg')
-                    .row
-                        .col-4.prod__detail
-                            +prod__detail('../images/10.jpg') 
-                        .col-4.prod__detail
-                            +prod__detail('../images/9.jpg') 
-                        .col-4.prod__detail
-                            +prod__detail('../images/6.jpg')
-                    .row
-                        .col-4.prod__detail
-                            +prod__detail('../images/11.jpg') 
-                        .col-4.prod__detail
-                            +prod__detail('../images/5.jpg') 
-                        .col-4.prod__detail
-                            +prod__detail('../images/7.jpg')
-                    .row
-                        .col-4.prod__detail
-                            +prod__detail('../images/36.jpg') 
-                        .col-4.prod__detail
-                            +prod__detail('../images/35.jpg') 
-                        .col-4.prod__detail
-                            +prod__detail('../images/34.jpg')
-                    .row
-                        .col-4.prod__detail
-                            +prod__detail('../images/36.jpg') 
-                        .col-4.prod__detail
-                            +prod__detail('../images/35.jpg') 
-                        .col-4.prod__detail
-                            +prod__detail('../images/34.jpg')
+                    mixin prod__detail2(link1,link2,link3)
+                        .row
+                            each link in [link1,link2,link3]
+                                .col-4.prod__detail
+                                    +prod__detail(link)
+                    +prod__detail2('../images/3.jpg','../images/4.jpg','../images/5.jpg')
+                    +prod__detail2('../images/6.jpg','../images/7.jpg','../images/8.jpg')
+                    +prod__detail2('../images/10.jpg','../images/9.jpg','../images/6.jpg')
+                    +prod__detail2('../images/11.jpg','../images/5.jpg','../images/7.jpg')
+                    +prod__detail2('../images/36.jpg','../images/35.jpg','../images/4.jpg')
+                    +prod__detail2('../images/9.jpg','../images/5.jpg','../images/3.jpg')
                 .content__right__footer
-                    include _footer-product.pug 
+                    include ../file_pug/sub_page/_footer-product.pug 
         .clearfix
-    include _footer.pug
+    include ../file_pug/sub_page/_footer.pug
     
     // Optional JavaScript
     // jQuery first, then Popper.js, then Bootstrap JS

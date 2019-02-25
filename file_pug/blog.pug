@@ -1,0 +1,110 @@
+doctype html
+head
+    // Required meta tags
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    // Bootstrap CSS
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css' integrity='sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA' crossorigin='anonymous')
+    // Font Awesome CDN
+    link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/", crossorigin="anonymous")
+    // Link CSS
+    link(rel="stylesheet", href="../file_scss/homepage.css")
+    title Project 1 - Machine Company
+body
+    mixin menu-active(text)
+        i.fas.fa-bars
+        .text= text  
+    mixin menu(text)
+        i.fas.fa-th-large
+        .text= text      
+
+    include ../file_pug/sub_page/_header.pug
+    
+    mixin content(img,title,date,author,cmt)
+        img(src=img, alt="")
+        .title= title
+        .info
+            .date= date
+            .author 
+                i.fas.fa-user
+                p Đăng bởi
+                span= author
+            .comment
+                i.fas.fa-comments
+                p= cmt
+                span Bình luận
+            .clearfix
+        .text Lorem Ipsum sing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...
+        .readmore [Đọc tiếp]
+                    
+    .container.blog
+        .breadcrumb
+            li.breadcrumb-item
+                a(href="") Trang chủ
+            i.fas.fa-caret-right
+            li.breadcrumb-item.active Tin tức
+        .row
+            .col-3.blog__menu
+                .blog__menu__prod
+                    .menu__info.active
+                        +menu-active('DANH MỤC SẢN PHẨM')  
+                    each val in ['Máy in phun cỡ lớn','Máy quét Canon 3D','Máy hàn điện Alunima','Máy khoan Decameta','Máy phay đa năng CNC','Máy mài, tiện DC 12V','Máy khoan, cắt CNC','Máy quay thông minh N3','Motor R34C đa dụng','Máy in laser màu 3D']
+                        .menu__info
+                            +menu(val)
+                .blog__menu__news
+                    .title
+                        i.fas.fa-th-large
+                        .text DANH MỤC TIN TỨC
+                    each val in ['Đời sống pháp luật (5)', "Kinh tế trong nước (8)", "Sức khỏe và gia đình (9)", "Công nghệ thông tin (5)", "Tin tức khác (12)"]
+                        li= val
+                .blog__menu__img
+                    .title
+                        i.fas.fa-th-large
+                        .text THƯ VIỆN HÌNH ẢNH
+                    mixin img(link1,link2,link3)
+                        .row
+                            each val in [link1,link2,link3]
+                                .col-4
+                                    img(src=val)
+                    +img("../images/40.jpg","../images/41.jpg","../images/42.jpg")                    
+                    +img("../images/43.jpg","../images/44.jpg","../images/45.jpg")
+                .blog__menu__tags
+                    .title
+                        i.fas.fa-th-large
+                        .text THẺ TAGS
+                    mixin tags(tag)
+                        a(href="")
+                        button= tag
+                    +tags('thời trang')
+                    +tags('máy khoan')
+                    +tags('news')
+                    +tags('công nghiệp')
+                    +tags('xây dựng')
+                    +tags('phay')
+                    +tags('máy cắt')
+                    +tags('hóa chất')
+            .col-9.blog__content
+                .blog__content_wrap
+                    +content("../images/46.jpg","THẾ HỆ MÁY KHOAN CẮT ĐẦU TIÊN ĐÃ ĐƯỢC TÁI SỬ DỤNG","Thứ năm, ngày 23/10/2015 8:00 AM","Design Team","12")
+                hr
+                .blog__content_wrap
+                    +content("../images/47.jpg","THẾ HỆ MÁY KHOAN CẮT ĐẦU TIÊN ĐÃ ĐƯỢC TÁI SỬ DỤNG","Thứ năm, ngày 23/10/2015 8:00 AM","Design Team","12")
+                hr
+                .blog__content_wrap
+                    +content("../images/48.jpg","THẾ HỆ MÁY KHOAN CẮT ĐẦU TIÊN ĐÃ ĐƯỢC TÁI SỬ DỤNG","Thứ năm, ngày 23/10/2015 8:00 AM","Design Team","12")
+                hr
+                .blog__content_wrap
+                    +content("../images/49.jpg","THẾ HỆ MÁY KHOAN CẮT ĐẦU TIÊN ĐÃ ĐƯỢC TÁI SỬ DỤNG","Thứ năm, ngày 23/10/2015 8:00 AM","Design Team","12")
+                hr
+                .content__right__footer
+                    include ../file_pug/sub_page/_footer-product.pug 
+                    .clearfix
+                
+    include ../file_pug/sub_page/_footer.pug
+    
+    // Optional JavaScript
+    // jQuery first, then Popper.js, then Bootstrap JS
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49' crossorigin='anonymous')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js' integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy' crossorigin='anonymous')
+

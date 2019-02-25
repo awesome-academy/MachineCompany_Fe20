@@ -31,7 +31,7 @@ body
                 button MUA NGAY
                 button XEM CHI TIẾT 
 
-    include _header.pug
+    include ../file_pug/sub_page/_header.pug
     
     .container
         .breadcrumb
@@ -43,7 +43,7 @@ body
             li.breadcrumb-item.active Máy khoan CNC 3D
         .row.content
             .col-3.content__left
-                include _menu-product.pug
+                include ../file_pug/sub_page/_menu-product.pug
             .col-9.content__right
                 .content__right__top
                     .img
@@ -131,7 +131,7 @@ body
                             +prod__detail('../images/5.jpg')                                                    
         .clearfix
 
-    include _footer.pug
+    include ../file_pug/sub_page/_footer.pug
     
     // Optional JavaScript
     // jQuery first, then Popper.js, then Bootstrap JS

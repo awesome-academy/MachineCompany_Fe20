@@ -35,7 +35,7 @@ body
                 button MUA NGAY
                 button XEM CHI TIẾT 
 
-    include _header.pug
+    include ../file_pug/sub_page/_header.pug
     
     .container
         .breadcrumb
@@ -45,10 +45,10 @@ body
             li.breadcrumb-item.active Danh mục sản phẩm
         .content
             .col-3.content__left
-                include _menu-product.pug
+                include ../file_pug/sub_page/_menu-product.pug
             .col-9.content__right
                 .content__right__header
-                    include _header-product.pug
+                    include ../file_pug/sub_page/_header-product.pug
                 .content__right__content
                     .detail
                         +detail("../images/10.jpg")
@@ -69,9 +69,9 @@ body
                     .detail
                         +detail("../images/38.jpg")
                 .content__right__footer
-                    include _footer-product.pug                                      
+                    include ../file_pug/sub_page/_footer-product.pug                                      
         .clearfix
-    include _footer.pug
+    include ../file_pug/sub_page/_footer.pug
     
     // Optional JavaScript
     // jQuery first, then Popper.js, then Bootstrap JS

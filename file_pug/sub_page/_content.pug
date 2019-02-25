@@ -9,10 +9,10 @@ mixin prod__detail(link)
         .name Máy khoan Black Decker
         .vote
             .star
-                i.fas.fa-star
-                i.fas.fa-star
-                i.fas.fa-star
-                i.fas.fa-star
+                - var n = 0
+                    while n < 4
+                        i.fas.fa-star
+                        - n++
                 i.far.fa-star
             .text (12 Đánh giá)
             .clearfix
@@ -30,10 +30,10 @@ mixin prod__detail2(link)
             .name MÁY KHOAN CNC 3D
             .vote
                 .star
-                    i.fas.fa-star
-                    i.fas.fa-star
-                    i.fas.fa-star
-                    i.fas.fa-star
+                    - var n = 0
+                        while n < 4
+                           i.fas.fa-star
+                           -n++ 
                     i.far.fa-star
                 .text (12 Đánh giá)
                 .clearfix
@@ -59,44 +59,21 @@ mixin prod__detail2(link)
             .clearfix
         .prod-featured__bottom
             .row
-                .col-3.menu                  
+                .col-3.menu 
                     .menu__info.active
-                        +menu__info('Máy khoan, cắt CNC')                        
-                    .menu__info
-                        +menu__info('Máy in phun cỡ lớn') 
-                    .menu__info
-                        +menu__info('Máy quét Canon 3D') 
-                    .menu__info
-                        +menu__info('Máy hàn điện Alunima') 
-                    .menu__info
-                        +menu__info('Máy khoan Decameta') 
-                    .menu__info
-                        +menu__info('Máy phay đa năng CNC') 
-                    .menu__info
-                        +menu__info('Máy mài, tiện DC 12V') 
-                    .menu__info
-                        +menu__info('Máy khoan, cắt CNC') 
-                    .menu__info
-                        +menu__info('Máy quay thông minh N3') 
-                    .menu__info
-                        +menu__info('Motor R34C đa dụng') 
-                    .menu__info
-                        +menu__info('Máy in laser màu 3D') 
+                        +menu__info('Máy khoan, cắt CNC')  
+                    each val in ['Máy in phun cỡ lớn','Máy quét Canon 3D','Máy hàn điện Alunima','Máy khoan Decameta','Máy phay đa năng CNC','Máy mài, tiện DC 12V','Máy khoan, cắt CNC','Máy quay thông minh N3','Motor R34C đa dụng','Máy in laser màu 3D']
+                        .menu__info
+                            +menu__info(val)
                 .col-9.prod
                     .row
-                        .col-4.prod__detail
-                            +prod__detail('../images/3.jpg')                                                        
-                        .col-4.prod__detail
-                            +prod__detail('../images/4.jpg') 
-                        .col-4.prod__detail
-                            +prod__detail('../images/5.jpg') 
+                        each val in ['../images/3.jpg','../images/4.jpg','../images/5.jpg']
+                            .col-4.prod__detail
+                                +prod__detail(val)
                     .row
-                        .col-4.prod__detail
-                            +prod__detail('../images/6.jpg') 
-                        .col-4.prod__detail
-                            +prod__detail('../images/7.jpg') 
-                        .col-4.prod__detail
-                            +prod__detail('../images/8.jpg') 
+                        each val in ['../images/6.jpg','../images/7.jpg','../images/8.jpg']
+                            .col-4.prod__detail
+                                +prod__detail(val) 
     .prod-new
         .prod-new__top
             .prod-new__top__left
@@ -109,11 +86,8 @@ mixin prod__detail2(link)
                 button
                     i.fas.fa-caret-right
             .prod-new__top__right
-                button Máy khoan
-                button Máy in 3D
-                button Máy CNC
-                button Máy tiện
-                button Máy khác
+                each val in ['Máy khoan','Máy in 3D','Máy CNC','Máy tiện','Máy khác']
+                    button= val
             .clearfix
         .prod-new__bottom
             .row
@@ -142,11 +116,8 @@ mixin prod__detail2(link)
                 button
                     i.fas.fa-caret-right
             .prod-sell__top__right
-                button Máy khoan
-                button Máy in 3D
-                button Máy CNC
-                button Máy tiện
-                button Máy khác
+                each val in ['Máy khoan','Máy in 3D','Máy CNC','Máy tiện','Máy khác']
+                    button= val
             .clearfix
         .prod-sell__bottom
             .row
@@ -187,4 +158,18 @@ mixin prod__detail2(link)
                     +prod__detail2("../images/4.jpg")
                 .col-6.prod-detail2
                     +prod__detail2("../images/9.jpg")
-
+.container-fluid.spons
+    .container.spons__content
+        mixin spons(link)
+            .spons__content__img
+                img(src=link, alt="")
+        +spons('../images/20.png')
+        +spons('../images/21.png')
+        +spons('../images/22.png')
+        +spons('../images/23.png')
+        +spons('../images/24.png')
+        .clearfix
+.container-fluid.email
+    .text Đăng ký để nhận tin tức khuyến mại hàng tuần
+    input(type="text" placeholder="Nhập email của bạn...")
+    button ĐĂNG KÍ
