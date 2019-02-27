@@ -1,0 +1,253 @@
+.container {
+    padding: 0;
+    .breadcrumb {
+        padding: 30px 0;
+        background: none;
+        .breadcrumb-item {
+            padding-right: 10px;
+            color: $gray-800;
+            a {
+                color: $gray-800;
+            }
+            &.active {
+                color: $black-icon;
+            }
+        }
+        .fas {
+            color: $gray-800;
+            padding-right: 10px;
+            padding-top: 5px;
+        }
+    }
+    .content {
+        .content__left {
+            @include clear;
+            >[class*="menu"] {
+                margin-bottom: 30px;
+            }
+            float: left;
+            padding-right: 30px;
+            .menu {
+                @include menu();
+            }
+            .menu-price {
+                @include menu();
+            }
+            .menu-color {
+                @include menu();
+                .menu__info {
+                    .red {
+                        width: 18px;
+                        height: 18px;
+                        background: $red-bold;
+                        float: left;
+                        margin: 2px 15px;
+                    }
+                    .yellow {
+                        @extend .red;
+                        background: $yellow;
+                    }
+                    .blue {
+                        @extend .red;
+                        background: $blue;
+                    }
+                    .silver {
+                        @extend .red;
+                        background: $silver;
+                    }
+                    .black {
+                        @extend .red;
+                        background: $gray-900;
+                    }
+                }
+            }
+            .menu-promotion {
+                @include menu();
+                .menu__info {
+                    height: 120px;
+                    padding-top: 0;
+                    clear: both;
+                    .img {
+                        position: relative;
+                        width: 40%;
+                        height: 120px;
+                        float: left;
+                        img {
+                            @include align-center;
+                            width: 90%;
+                        }
+                    }
+                    .text2 {
+                        width: 60%;
+                        float: right;
+                        margin-top: 25px;
+                        .name {
+                            font-size: 14px;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                        }
+                        .price {
+                            @extend .name;
+                            color: $red;
+                            margin-top: 5px;
+                        }
+                    }
+                    &.active {
+                        height: 60px;
+                        .fas {
+                            padding-top: 22px;
+                        }
+                        .text {
+                            padding-top: 18px;
+                        }
+                    }
+                    &:hover {
+                        background: none;
+                    }
+                }
+            }
+        }
+        .content__right {
+            @include clear;
+            float: left;
+            margin-bottom: 30px;
+            .content__right__header {
+                font-size: 14px;
+                color: $black-bg;
+                height: 60px;
+                border-bottom: 1px solid $gray-border;
+                padding-top: 10px;
+                p {
+                    float: left;
+                    margin-right: 10px;
+                    padding-top: 5px;
+                }
+                select {
+                    float: left;
+                    margin-right: 30px;
+                    padding: 5px 50px 5px 5px;
+                    color: $gray-800;
+                    border: 1px solid $gray-500;
+                }
+                .icon {
+                    float: right;
+                    .fas {
+                        border: 1px solid $gray-500;
+                        color: $black-bg;
+                        padding: 10px;
+                        margin-left: 5px;
+                        font-size: 16px;
+                        &.active {
+                            color: $yellow;
+                        }
+                    }
+                }
+            }
+            .content__right__content {
+                margin: 30px 0;
+                .detail {
+                    height: 250px;
+                    margin-bottom: 30px;
+                    box-shadow: $box-shadow;
+                    .img {
+                        @include clear;
+                        float: left;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .info {
+                        @extend .img;
+                        @include prod__detail;
+                        padding: 3% 1%;
+                        .name {
+                            font-size: 14px;
+                            font-weight: bold;
+                            color: $black-bg;
+                            text-transform: uppercase;
+                            margin: 5px 0;
+                        }
+                        .vote {
+                            font-size: 12px;
+                            position: relative;
+                            line-height: 10px;
+                            .star {
+                                float: left;
+                                color: $yellow;
+                                padding: 0 3px;
+                            }
+                            .text {
+                                float: left;
+                                font-style: italic;
+                                padding: 0 3px;
+                                color: $gray-800;
+                            }
+                        }
+                        .text {
+                            font-size: 13px;
+                            color: $gray-800;
+                        }
+                        .price {
+                            color: $red;
+                            font-size: 18px;
+                            font-weight: bold;
+                            margin: 5px 0;
+                        }
+                        .button {
+                            button {
+                                background: #202020;
+                                font-size: 12px;
+                                font-weight: bold;
+                                height: 40px;
+                                padding: 0 25px;
+                                margin-right: 8px;
+                                color: #fff;
+                                &:hover {
+                                    background: $yellow;
+                                    transition: .3s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .content__right__footer {
+                font-size: 13px;
+                .wrap {
+                    float: right;
+                    a {
+                        button {
+                            height: 40px;
+                            color: $gray-800;
+                            border: 1px solid $gray-500;
+                            padding: 0 16px;
+                            margin-left: 5px;
+                            &.active,
+                            &:hover {
+                                background: $yellow;
+                                border: 1px solid $yellow;
+                                transition: .3s;
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.container {
+    .content {
+        .content__right {
+            .content__right__content {
+                .row {
+                    .prod__detail {
+                        @include prod__detail;
+                        padding: 0 0 3% 3%;
+                    }
+                }
+            }
+        }
+    }
+}
