@@ -1,7 +1,7 @@
 .container-fluid.contact
     .container
         .row.contact__top
-            .col-4.contact__top__content
+            .col-4.contact__top__content.first
                 i.fas.fa-th-large
                 .title VỀ CHÚNG TÔI
                 .text Công ty Cổ phần Công nghệ DKT đã và đang khẳng định được vị trí hàng đầu trong lĩnh vực thương mại điện tử.
@@ -14,7 +14,7 @@
                 +icon('fa-envelope','support@dkt.com.vn')
                 +icon('fa-mobile-alt','(84-4) 66558856 - (88-4) 52656565')
             mixin contact(title, l1, l2, l3, l4, l5, l6)
-                .col-2.contact__top_content
+                .col-2.contact__top__content
                     i.fas.fa-th-large
                     .title= title
                     each val in [l1, l2, l3, l4, l5, l6]
@@ -22,7 +22,7 @@
             +contact('CHÍNH SÁCH','Chính sách giao hàng','Chính sách đổi sản phẩm','Chính sách bảo hành','Chính sách trả góp','Giới thiệu hàng đổi trả','Vận chuyển miễn phí')
             +contact('DỊCH VỤ & HỖ TRỢ','Hệ thống cửa hàng','Dịch vụ đổi trả hàng','Hướng dẫn mua hàng','Hướng dẫn thanh toán','Tích điểm đổi thưởng','Câu hỏi thường gặp')
             +contact('TIN TỨC - SỰ KIỆN','Tin tức mới nhất','Tin tức khuyến mại','Tuyển dụng, đãi ngộ','Download tài liệu','Chương trình đối tác','Nhà phát triển ứng dụng')
-            .col-2.contact__top_content
+            .col-2.contact__top__content
                 i.fas.fa-th-large
                 .title KẾT NỐI
                 mixin connect(cl,text)

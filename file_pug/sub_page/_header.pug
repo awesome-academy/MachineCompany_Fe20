@@ -37,10 +37,6 @@ header.header
                     a.dropdown-toggle(data-toggle='dropdown')
                         li GIỚI THIỆU
                     .dropdown-menu
-                        //- each val in ['Giới thiệu chung','Hệ thống cửa hàng','Chính sách ưu đãi','Thông tin tuyển dụng']
-                        //-     a.dropdown-item(href='') 
-                        //-         i.fas.fa-caret-right
-                        //-         span= val
                         mixin dropdown(link, text)
                             a.dropdown-item(href=link) 
                                 i.fas.fa-caret-right
@@ -58,6 +54,6 @@ header.header
                     a(href="")
                         li LIÊN HỆ
             .header__menu__right
-                a.dropdown-toggle(data-toggle='dropdown')
+                a(href="../file_pug/cart.html")
                     i.fas.fa-shopping-basket
                     p 0

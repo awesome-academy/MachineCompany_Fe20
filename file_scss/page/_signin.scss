@@ -1,0 +1,20 @@
+.signin {
+    @extend .signup;
+    .signin__left {
+        width: 48%;
+        float: left;
+        @extend .info-profile;
+        .form {
+            width: 100%;
+        }
+    }
+    .signin__right {
+        @extend .signin__left;
+        float: right;
+        .text {
+            font-size: 14px;
+            color: $gray-800;
+            padding-bottom: 30px;
+        }
+    }
+}

@@ -195,13 +195,13 @@ ul {
     height: 70px;
     border: 1px solid #363636;
     position: relative; }
-    .header .header__menu .header__menu__right .dropdown-toggle .fa-shopping-basket {
+    .header .header__menu .header__menu__right a .fa-shopping-basket {
       font-size: 25px;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
-    .header .header__menu .header__menu__right .dropdown-toggle::after {
+    .header .header__menu .header__menu__right a::after {
       content: none; }
     .header .header__menu .header__menu__right p {
       font-size: 16px;
@@ -489,6 +489,8 @@ ul {
           background: #f5bd10; }
   .container .prod-new .prod-new__bottom .row .prod__detail:hover .button, .container .prod-sell .prod-new__bottom .row .prod__detail:hover .button {
     visibility: inherit; }
+  .container .prod-new .prod-new__bottom .row .prod__detail .wrap-content .vote, .container .prod-sell .prod-new__bottom .row .prod__detail .wrap-content .vote {
+    padding: 0 28%; }
 .container .banner-mid {
   padding-top: 5%; }
   .container .banner-mid .row .banner-mid__img {
@@ -614,6 +616,8 @@ ul {
     transform: translate(-50%, -50%); }
     .container .prod-sell .prod-sell__bottom .row .prod-sell__bottom__center .prod-detail .wrap-content img {
       width: auto; }
+    .container .prod-sell .prod-sell__bottom .row .prod-sell__bottom__center .prod-detail .wrap-content .vote {
+      padding: 0 33%; }
 .container .prod-sell .prod-sell__bottom .row .prod-sell__bottom__right {
   padding: 0;
   margin: 0; }
@@ -812,35 +816,37 @@ ul {
             width: 90%;
             float: left;
             padding: 0; }
-      .contact .container .contact__top .contact__top_content, .contact .container .contact__bottom .contact__top_content {
+      .contact .container .contact__top .contact__top__content, .contact .container .contact__bottom .contact__top__content {
         padding: 0;
         margin: 0;
         font-size: 13px;
         list-style: none; }
-        .contact .container .contact__top .contact__top_content .fa-th-large, .contact .container .contact__bottom .contact__top_content .fa-th-large {
+        .contact .container .contact__top .contact__top__content .fa-th-large, .contact .container .contact__bottom .contact__top__content .fa-th-large {
           font-size: 14px;
           color: #f5bd10;
           float: left;
           font-size: 12px;
           padding-top: 7px; }
-        .contact .container .contact__top .contact__top_content .title, .contact .container .contact__bottom .contact__top_content .title, .contact .container .contact__top .contact__top_content .blog__menu .blog__menu__news li, .blog__menu .blog__menu__news .contact .container .contact__top .contact__top_content li, .contact .container .contact__bottom .contact__top_content .blog__menu .blog__menu__news li, .blog__menu .blog__menu__news .contact .container .contact__bottom .contact__top_content li, .contact .container .contact__top .contact__top_content .blog__menu .blog__menu__img li, .blog__menu .blog__menu__img .contact .container .contact__top .contact__top_content li, .contact .container .contact__bottom .contact__top_content .blog__menu .blog__menu__img li, .blog__menu .blog__menu__img .contact .container .contact__bottom .contact__top_content li, .contact .container .contact__top .contact__top_content .blog__menu .blog__menu__tags li, .blog__menu .blog__menu__tags .contact .container .contact__top .contact__top_content li, .contact .container .contact__bottom .contact__top_content .blog__menu .blog__menu__tags li, .blog__menu .blog__menu__tags .contact .container .contact__bottom .contact__top_content li {
+        .contact .container .contact__top .contact__top__content .title, .contact .container .contact__bottom .contact__top__content .title, .contact .container .contact__top .contact__top__content .blog__menu .blog__menu__news li, .blog__menu .blog__menu__news .contact .container .contact__top .contact__top__content li, .contact .container .contact__bottom .contact__top__content .blog__menu .blog__menu__news li, .blog__menu .blog__menu__news .contact .container .contact__bottom .contact__top__content li, .contact .container .contact__top .contact__top__content .blog__menu .blog__menu__img li, .blog__menu .blog__menu__img .contact .container .contact__top .contact__top__content li, .contact .container .contact__bottom .contact__top__content .blog__menu .blog__menu__img li, .blog__menu .blog__menu__img .contact .container .contact__bottom .contact__top__content li, .contact .container .contact__top .contact__top__content .blog__menu .blog__menu__tags li, .blog__menu .blog__menu__tags .contact .container .contact__top .contact__top__content li, .contact .container .contact__bottom .contact__top__content .blog__menu .blog__menu__tags li, .blog__menu .blog__menu__tags .contact .container .contact__bottom .contact__top__content li {
           font-size: 16px;
           color: #252525;
           font-weight: bold;
           float: left;
           margin-left: 10px; }
-        .contact .container .contact__top .contact__top_content li, .contact .container .contact__bottom .contact__top_content li {
+        .contact .container .contact__top .contact__top__content li, .contact .container .contact__bottom .contact__top__content li {
           width: 100%;
           float: left;
           margin-top: 20px; }
-          .contact .container .contact__top .contact__top_content li .fab, .contact .container .contact__bottom .contact__top_content li .fab {
+          .contact .container .contact__top .contact__top__content li .fab, .contact .container .contact__bottom .contact__top__content li .fab {
             width: 10%;
             float: left;
             padding-top: 5px; }
-          .contact .container .contact__top .contact__top_content li div, .contact .container .contact__bottom .contact__top_content li div {
+          .contact .container .contact__top .contact__top__content li div, .contact .container .contact__bottom .contact__top__content li div {
             width: 90%;
             float: left;
             padding: 0; }
+        .contact .container .contact__top .contact__top__content.first, .contact .container .contact__bottom .contact__top__content.first {
+          padding-right: 30px !important; }
     .contact .container .contact__bottom .contact__bottom__left, .contact .container .contact__bottom .contact__bottom__right {
       padding: 0 30px 0 0;
       font-size: 13px;
@@ -1728,5 +1734,110 @@ ul {
         border: 1px solid #f5bd10;
         transition: .3s;
         color: #fff; }
+
+.error .error__left {
+  padding: 0;
+  margin: 0;
+  width: 60%;
+  float: left;
+  position: relative; }
+  .error .error__left .wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+    .error .error__left .wrap .title, .error .error__left .wrap .blog__menu .blog__menu__news li, .blog__menu .blog__menu__news .error .error__left .wrap li, .error .error__left .wrap .blog__menu .blog__menu__img li, .blog__menu .blog__menu__img .error .error__left .wrap li, .error .error__left .wrap .blog__menu .blog__menu__tags li, .blog__menu .blog__menu__tags .error .error__left .wrap li {
+      font-size: 100px;
+      color: #f5bd10;
+      font-weight: bold; }
+    .error .error__left .wrap .text {
+      width: max-content;
+      font-size: 18px;
+      color: #252525; }
+    .error .error__left .wrap a button {
+      width: 150px;
+      height: 55px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #fff;
+      background: #252525;
+      margin: 30px 0; }
+      .error .error__left .wrap a button:hover {
+        background: #f5bd10;
+        transition: .3s; }
+.error .error__right {
+  width: 40%;
+  float: left; }
+  .error .error__right .wrap img {
+    width: 100%; }
+
+.cart {
+  font-weight: bold; }
+  .cart .breadcrumb {
+    font-weight: normal; }
+  .cart .button {
+    float: right; }
+    .cart .button button {
+      font-size: 14px;
+      font-weight: bold;
+      height: 55px;
+      padding: 0 30px;
+      margin: 15px 0px 80px 10px;
+      color: #fff;
+      background: #202020; }
+      .cart .button button:hover {
+        background: #f5bd10;
+        transition: .3s; }
+
+.table {
+  text-align: center; }
+  .table th {
+    padding: 1rem 0; }
+  .table tbody tr {
+    height: 150px; }
+    .table tbody tr td {
+      position: relative; }
+      .table tbody tr td .wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+        .table tbody tr td .wrap img {
+          width: 100%; }
+      .table tbody tr td:nth-child(1) {
+        width: 95px; }
+      .table tbody tr td:nth-child(2) {
+        width: 190px; }
+      .table tbody tr td:nth-child(3) {
+        width: 285px; }
+        .table tbody tr td:nth-child(3) div {
+          width: 100%; }
+      .table tbody tr td:nth-child(4) {
+        width: 190px; }
+      .table tbody tr td:nth-child(5) {
+        width: 95px; }
+      .table tbody tr td:nth-child(6) {
+        width: 190px; }
+      .table tbody tr td:nth-child(7) {
+        width: 95px;
+        color: #ff0000; }
+
+.table-pay {
+  width: 100%;
+  float: right;
+  text-transform: uppercase; }
+  .table-pay tbody {
+    width: 50%;
+    float: right; }
+    .table-pay tbody tr {
+      height: 60px; }
+      .table-pay tbody tr td {
+        padding: 0 30px 0 150px;
+        text-align: right; }
+        .table-pay tbody tr td.red, .table-pay tbody tr .container .content .content__left .menu-color .menu__info td.yellow, .container .content .content__left .menu-color .menu__info .table-pay tbody tr td.yellow, .table-pay tbody tr .container .content .content__left .menu-color .menu__info td.blue, .container .content .content__left .menu-color .menu__info .table-pay tbody tr td.blue, .table-pay tbody tr .container .content .content__left .menu-color .menu__info td.silver, .container .content .content__left .menu-color .menu__info .table-pay tbody tr td.silver, .table-pay tbody tr .container .content .content__left .menu-color .menu__info td.black, .container .content .content__left .menu-color .menu__info .table-pay tbody tr td.black {
+          color: #ff0000; }
+  .table-pay.table-bordered {
+    border: none; }
 
 /*# sourceMappingURL=homepage.css.map */

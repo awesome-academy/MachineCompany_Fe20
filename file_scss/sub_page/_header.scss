@@ -144,7 +144,7 @@
             height: 70px;
             border: 1px solid $black-icon;
             position: relative;
-            .dropdown-toggle {
+            a {
                 .fa-shopping-basket {
                     font-size: 25px;
                     @include align-center();
